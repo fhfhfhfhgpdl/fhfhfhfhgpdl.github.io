@@ -147,3 +147,46 @@ const showCards3 = () => {
 document.addEventListener("DOMContentLoaded", showCards3);
 
 
+const hackathonsection = document.querySelector(".hackathon-section");
+const mentor = [
+  {
+    title: "ULHacks",
+    subtitle: "Judge",
+    image: "assets/images/experience-page/ulhacks.png",
+    desp: "ULHacks is a 36 hour long hackathon organized with an aim to enable students to create a project which empowers learning.",
+  },
+  {
+    title: "WaffleHacks",
+    subtitle: "Judge",
+    image: "assets/images/experience-page/wafflehacks.png",
+    desp: "WaffleHacks 2021 is an upcoming 48-hour student-organized hackathon with an aim to bring technical solutions to local communities and small businesses.",
+  },
+  {
+    title: "Elevate Tech",
+    subtitle: "Judge",
+    image: "assets/images/experience-page/elevate.png",
+    desp: "Elevate Hacks is an upcoming all-female virtual hackathon coming from AUGUST 14th to 15th.",
+  },
+];
+
+const showCards4 = () => {
+  let output = "";
+  mentor.forEach(
+    ({ title, image, subtitle, desp }) =>
+      (output += `  
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+            <img src="${image}" alt="">
+        </div>
+        <div class="blog-slider__content">
+          <div class="blog-slider__title">${title}</div>
+          <span class="blog-slider__code">${subtitle}</span>
+          <div class="blog-slider__text">${desp}</div>
+          <a href="#" class="blog-slider__button">Read More</a>   
+        </div>
+      </div>
+      `)
+  );
+  hackathonsection.innerHTML = output;
+};
+document.addEventListener("DOMContentLoaded", showCards4);
