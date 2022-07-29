@@ -62,59 +62,46 @@ document.addEventListener("DOMContentLoaded", showCards2);
 const genlink = document.querySelector(".genlink-section");
 const pm = [
   {
-    cla: "blog-slider__img",
     title: "Gen-Link",
     subtitle: "Project Manager | Designer",
-    image: 'img src = "assets/images/experience-page/gen-cha.png"',
+    image: 'assets/images/experience-page/gen-cha.png',
     desp: "세대를 연결하다, 젠링",
     goto: "#", target:"_self", index:"go up"
   },
   {
-    cla: "blog-slider__img",
     title: "📰News Letter",
     subtitle: "",
-    image: 'img src = "assets/images/experience-page/genlink logo.jpg"',
+    image: 'assets/images/experience-page/genlink logo.jpg',
     desp: "수익금을 지역 청소년 상담 복지 센터에 기부해<br>다양한 인터넷 신문사에서 기사 업로드",
     goto: "http://www.gynews.co.kr/news/articleView.html?idxno=13552",
     target: "_blank", index:"Go to article"
   },
   {
-    cla:"blog-slider__item",
     title: "💬Presentation",
     subtitle: "",
-    image: 'iframe width="300" height="300" src="https://www.youtube.com/embed/FET2KHIWSCw?start=2748" title="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    image: 'assets/images/experience-page/presentation.jpg',
     desp: "하이챌린지스쿨 연합 공유회 프로젝트 발표",
     goto: "https://youtu.be/FET2KHIWSCw?t=2748",
     target: "_blank", index:"Watch on youtube"
   },
-  // {
-  //   cla:"",
-  //   title: "💬Presentation",
-  //   subtitle: "",
-  //   image: 'iframe width="300" height="300" src="https://www.youtube.com/embed/FET2KHIWSCw?t=2748" title="2021 현대해상X어썸스쿨 [하이챌린지스쿨 연합공유회]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/',
-  //   desp: "하이챌린지스쿨 연합 공유회 프로젝트 발표",
-  //   goto: "https://youtu.be/FET2KHIWSCw?t=2748",
-  //   target: "_blank", index:"Watch on youtube"
-  // },
-  // {
-  //   cla:"",
-  //   title: "💬Presentation",
-  //   subtitle: "",
-  //   image: 'iframe width="300" height="300" src="https://www.youtube.com/embed/FET2KHIWSCw?start=1668" title="2021 현대해상X어썸스쿨 [하이챌린지스쿨 연합공유회]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-  //   desp: "하이챌린지스쿨 연합 공유회 프로젝트 발표",
-  //   goto: "https://youtu.be/FET2KHIWSCw?t=2748",
-  //   target: "_blank", index:"Watch on youtube"
-  // },
+  {
+    title: "🏆Prize",
+    subtitle: "",
+    image: 'assets/images/experience-page/prize.jpg',
+    desp: "하이챌린지스쿨 연합 공유회 수상<br>체인지 메이커 상",
+    goto: "https://youtu.be/FET2KHIWSCw?t=5749",
+    target: "_blank", index:"Watch on youtube"
+  },
 ];
 
 const showCards3 = () => {
   let output = "";
   pm.forEach(
-    ({ title, image, subtitle, desp, goto, target, index, cla }) =>
+    ({ title, image, subtitle, desp, goto, target, index }) =>
       (output += `  
       <div class="blog-slider__item swiper-slide">
-        <div class="${cla}">
-        <${image}>
+        <div class="blog-slider__img">
+        <img src="${image}">
         </div>
         <div class="blog-slider__content">
           <div class="blog-slider__title">${title}</div>
@@ -134,35 +121,46 @@ document.addEventListener("DOMContentLoaded", showCards3);
 const ecomrmr = document.querySelector(".ecomrmr-section");
 const PM = [
   {
-    title: "Gen-Link",
-    subtitle: "Project Manager | Designer",
-    image: "assets/images/experience-page/gen-cha.png",
-    desp: "I would be responsible for guiding 100s of participants across the globe in their first steps towards Applied Data Science and building end-to-end machine learning projects.",
-    goto: "genlink"
-  },
-  {
     title: "Eco-MRMR",
     subtitle: "Project Manager | Product Designer | Designer | Developer",
     image: "assets/images/experience-page/맵.png",
-    desp: "ULHacks is a 36 hour long hackathon organized with an aim to enable students to create a project which empowers learning.",
-    goto: "ecomrmr"
+    desp: "2022 상반기 환경부 주최 에코톤을 위한 프로젝트<br>KDMHS 무럭무럭 창업동아리에서 진행",
+    goto: "#", 
+    index: "go up", target: "_self"
+  },
+  {
+    title: "💻Prototype",
+    subtitle: "",
+    image: "assets/images/experience-page/prototype.jpg",
+    desp: "Figma 사용",
+    goto: "https://bit.ly/3ldvN0x", 
+    index: "Go to Prototype", target:"_blank"
+  },
+  {
+    title: "🌱MRMR",
+    subtitle: "",
+    image: "assets/images/experience-page/mrmr.jpg",
+    desp: "KDMHS Club",
+    goto: "https://github.com/MurukMuruk", 
+    index: "Go to Github", target: "_blank"
   },
 ];
 
 const showCards4 = () => {
   let output = "";
-  pm.forEach(
-    ({ title, image, subtitle, desp, goto }) =>
+  PM.forEach(
+    ({ title, image, subtitle, desp, goto, index, target }) =>
       (output += `  
       <div class="blog-slider__item swiper-slide">
         <div class="blog-slider__img">
-            <img src="${image}" alt="">
+            <img src="${image}">
         </div>
         <div class="blog-slider__content">
           <div class="blog-slider__title">${title}</div>
           <span class="blog-slider__code">${subtitle}</span>
           <div class="blog-slider__text">${desp}</div>
-          <a href="#${goto}" class="blog-slider__button">Read More</a>   
+          <div style = 'float:right'>
+          <a href="${goto}" target="${target}" class="blog-slider__button">${index}</a>   </div> 
         </div>
       </div>
       `)
